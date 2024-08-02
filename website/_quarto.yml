@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: docs
+execute:
+  freeze: auto
+render:
+  - "!./www/*"
+
+website:
+  title: "Cophy Project"
+  navbar:
+    background: dark
+    left:
+      - text: "Cluster tutorial"
+        menu:
+        - text: "Part 1"
+          file: Tutorial_Cluster_Part1.qmd
+        - text: "Part 2"
+          file: Tutorial_Cluster_Part2.qmd             
+      - text: "Quarto tutorial"
+        menu:
+        - text: "Why Quarto"
+          file: tutorial.qmd
+        - text: "Quarto Workflow"
+          file: getstarted.qmd 
+        - text: "Quarto on the cluster"
+          file: help_quartonosudo.qmd
+      - text: "Other tutorials"
+        menu:
+          - text: "Github"
+            file: help_github.qmd
+          - text: "SSH in VS code"
+            file: help_ssh.qmd
+          - text: "Interactive Jupyter over SSH"
+            file: help_ssh_jupyter.qmd
+          - text: "BetterBibTex and Zotero"
+            file: help_zotero.qmd
+          - text: "Edit this website"
+            file: "edit_this_website.qmd"
+  
+    right:
+      - text: "About"
+        file: about.qmd
+
+format:
+  html:
+    theme: 
+      - cerulean
+      - custom.scss
+    toc: true
